@@ -1,9 +1,11 @@
 #include "whatever.hpp"
 
+#include <iostream>
+
 int main() {
     int a = 2;
     int b = 3;
-    std;;cout << "Before swap: a = " << a << ", b = " << b << std::endl;
+    std::cout << "Before swap: a = " << a << ", b = " << b << std::endl;
     ::swap(a, b);
     std::cout << "After swap: a = " << a << ", b = " << b << std::endl;
     std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
