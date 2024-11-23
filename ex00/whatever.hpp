@@ -3,6 +3,9 @@
 
 #include <iostream>
 
+#define RESET		"\033[0m"
+#define BOLD_CYAN	"\033[1;36m"
+
 template <typename T> void swap(T &a, T &b)
 {
     T tmp = a;
