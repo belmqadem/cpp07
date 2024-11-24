@@ -1,18 +1,22 @@
 #include "iter.hpp"
 
-void fo(int const &i) {
+void fo(int const &i)
+{
     std::cout << "int value: " YELLOW << i << RESET << std::endl;
 }
 
-void foo(char const &c) {
+void foo(char const &c)
+{
     std::cout << "char value: " YELLOW << c << RESET << std::endl;
 }
 
-void fooo(std::string const &s) {
+void fooo(std::string const &s)
+{
     std::cout << "string value: " YELLOW << s << RESET << std::endl;
 }
 
-int main() {
+int main()
+{
     int tab[] = {23, 10, 42, 13, 37, 99};
     ::iter(tab, sizeof(tab) / sizeof(tab[0]), fo);
 

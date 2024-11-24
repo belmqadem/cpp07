@@ -18,10 +18,14 @@ $(NAME) : $(OBJS)
 	@echo "$(GREEN)$(NAME) compiled.$(RESET)"
 
 clean :
+	@echo -n "$(RED)"
 	rm -f $(OBJS)
+	@echo -n "$(RESET)"
 
 fclean :
+	@echo -n "$(RED)"
 	rm -f $(OBJS) $(NAME)
+	@echo -n "$(RESET)"
 
 re : fclean all
 
