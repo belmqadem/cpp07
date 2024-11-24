@@ -4,8 +4,8 @@ RESET = \033[0m
 
 NAME = array
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
-SRCS = main.cpp Array.cpp
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 %.o : %.cpp
