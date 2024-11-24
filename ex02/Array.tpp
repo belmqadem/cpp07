@@ -43,6 +43,13 @@ template <typename T> T &Array<T>::operator[](unsigned int i) {
 	return array[i];
 }
 
+template <typename T> const T &Array<T>::operator[](unsigned int i) const {
+	if (i >= size) {
+		throw std::out_of_range(RED "index out of bounds" RESET);
+	}
+	return array[i];
+}
+
 template <typename T> unsigned int Array<T>::getSize() const {
 	return size;
 }

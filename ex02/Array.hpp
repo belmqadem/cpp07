@@ -20,6 +20,7 @@ template <typename T> class Array {
 		Array &operator=(Array const &);
 		~Array();
 		T &operator[](unsigned int i);
+		const T &operator[](unsigned int i) const;
 		unsigned int getSize() const;
 };
 

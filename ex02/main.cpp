@@ -25,8 +25,7 @@ int main() {
         }
 
 		std::cout << std::endl;
-        Array<int> assignedArray;
-        assignedArray = intArray;
+        const Array<int> assignedArray = intArray;
         std::cout << YELLOW "assignedArray size: " << assignedArray.getSize() << RESET << std::endl;
         for (unsigned int i = 0; i < assignedArray.getSize(); ++i) {
             std::cout << "assignedArray[" << i << "]: " << assignedArray[i] << std::endl;
