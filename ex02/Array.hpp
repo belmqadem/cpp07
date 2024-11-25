@@ -43,12 +43,17 @@ Array<T>::Array(unsigned int n) : array(new T[n]), size(n)
 }
 
 template <typename T>
-Array<T>::Array(Array const &other) : array(new T[other.size]), size(other.size)
+Array<T>::Array(Array const &other) : array(NULL), size(0)
 {
     std::cout << "Array copy constructor called" << std::endl;
-    for (unsigned int i = 0; i < size; i++)
+    if (other.size > 0)
     {
-        array[i] = other.array[i];
+        size = other.size;
+        array = new T[size];
+        for (unsigned int i = 0; i < size; i++)
+        {
+            array[i] = other.array[i];
+        }
     }
 }
 
@@ -59,8 +64,8 @@ Array<T> &Array<T>::operator=(Array const &other)
     if (this != &other)
     {
         delete[] array;
-        array = new T[other.size];
         size = other.size;
+        array = (size > 0) ? new T[size] : NULL;
         for (unsigned int i = 0; i < size; i++)
         {
             array[i] = other.array[i];

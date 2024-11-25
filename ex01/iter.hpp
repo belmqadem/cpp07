@@ -6,11 +6,17 @@
 #define RESET "\033[0m"
 #define YELLOW "\033[33m"
 
-template <typename T>
-void iter(T *array, int length, void (*f)(T const &))
+template <typename T, typename Func>
+void iter(T *array, int length, Func function)
 {
-    for (int i = 0; i < length; i++)
-        f(array[i]);
+    if (!array || length <= 0)
+    {
+        return;
+    }
+    for (int i = 0; i < length; ++i)
+    {
+        function(array[i]);
+    }
 }
 
 #endif
